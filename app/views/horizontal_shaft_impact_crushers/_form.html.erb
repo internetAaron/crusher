@@ -1,0 +1,39 @@
+<%= form_for(@horizontal_shaft_impact_crusher) do |f| %>
+  <% if @horizontal_shaft_impact_crusher.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@horizontal_shaft_impact_crusher.errors.count, "error") %> prohibited this horizontal_shaft_impact_crusher from being saved:</h2>
+
+      <ul>
+      <% @horizontal_shaft_impact_crusher.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :drive_diameter %>
+    <%= f.number_field :drive_diameter, :step => 0.01, :class => 'green' %>
+  </div>
+  <div class="field">
+    <%= f.label :driven_diameter %>
+    <%= f.number_field :driven_diameter, :step => 0.01, :class => 'yellow' %>
+  </div>
+  <div class="field">
+    <%= f.label :rpm %>
+    <%= f.number_field :rpm, :class => 'red' %>
+  </div>
+  <div class="field">
+    <%= f.label :roto_diameter %>
+    <%= f.number_field :roto_diameter, :step => 0.01, :class => 'blue' %>
+  </div>
+  <div class="actions">
+    <%= f.submit 'Save Calculation', :class => 'button' %>
+  </div>
+<% end %>
+
+<p>&nbsp;</p>

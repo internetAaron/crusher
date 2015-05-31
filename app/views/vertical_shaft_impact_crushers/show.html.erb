@@ -1,0 +1,42 @@
+<div class="container">
+  
+  <div class="span-12">
+
+		<p id="notice"><%= notice %></p>
+
+		<p>
+		  <strong>Name:</strong>
+		  <%= @vertical_shaft_impact_crusher.column_name %>
+		</p>
+
+		<p>
+		  <strong>Drive diameter:</strong>
+		  <%= @vertical_shaft_impact_crusher.drive_diameter %>
+		</p>
+
+		<p>
+		  <strong>Driven diameter:</strong>
+		  <%= @vertical_shaft_impact_crusher.driven_diameter %>
+		</p>
+
+		<p>
+		  <strong>Motor rpm:</strong>
+		  <%= @vertical_shaft_impact_crusher.motor_rpm %>
+		</p>
+
+		<p>
+		  <strong>Rotor diameter:</strong>
+		  <%= @vertical_shaft_impact_crusher.rotor_diameter %>
+		</p>
+
+		<p>
+		  <strong>Calculated Tip Speed:</strong>
+		  <strong class="green-text"><%= @vertical_shaft_impact_crusher.calculated_tip_speed.round(0) %></strong>
+		</p>
+
+		<%= link_to 'Edit', edit_vertical_shaft_impact_crusher_path(@vertical_shaft_impact_crusher) %> |
+		<%= link_to 'Destroy', @vertical_shaft_impact_crusher, method: :delete, data: { confirm: 'Are you sure?' } %> | 
+		<%= link_to 'Back', vertical_shaft_impact_crushers_path %>
+
+	</div>
+</div>

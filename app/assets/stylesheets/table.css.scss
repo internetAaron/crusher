@@ -1,0 +1,9 @@
+@import "variables";
+
+.tables thead th {
+	border: none;
+}
+
+tr.results {
+	background-color: lighten($green, 20%);
+}

@@ -1,0 +1,93 @@
+@import "variables";
+
+a {
+	color: $grey;
+
+	&:hover {
+		background: none;
+		color: darken($grey, 12%);
+	}
+}
+
+h2 {
+	display: block;
+	  padding-bottom: 0.5em;
+	  margin-bottom: 1.0em;
+	  font-size: 1.3rem;
+	  border-bottom: 1px solid $grey-light;
+}
+
+h3 {
+	color: $grey;
+	display: block;
+	font-weight: 400;	
+	padding-bottom: 0.5em;
+	margin-bottom: 1.0em;
+	font-size: 1.1rem;
+	border-bottom: 1px solid $grey-light;
+}
+
+h4 {
+	display: block;
+	width: 100%;
+}
+
+h2, h3, h4 {
+	.kicker {
+		display: inline-block;
+		font-size: 0.8em;
+		width: 100%;
+		font-weight: 400;
+		font-style: italic;
+		color: $grey-medium;
+	}
+}
+
+.badge {
+	padding: 0.25em 0.75em;
+	border-radius: 3px;
+	font-size: 11px;
+	color: #fff;
+	font-weight: 400;
+	position: relative;
+	bottom: 3px;
+	text-transform: uppercase;
+
+	&.green {
+		background: $green;
+	}
+
+	&.red {
+		background: $red;
+	}
+
+	&.blue {
+		background: $blue;
+	}
+
+	&.yellow {
+		background: $yellow;
+	}
+
+	&.grey {
+		background: $grey;
+	}
+}
+
+// TEXT COLORS
+
+.green-text {
+	color: $green;
+}
+
+.red-text {
+	color: $red;
+}
+
+.blue-text {
+	color: $blue;
+}
+
+.yellow-text {
+	color: $yellow;
+}

@@ -1,0 +1,36 @@
+<div class="container">
+  
+    <div class="span-12">
+
+        <p id="notice"><%= notice %></p>
+
+        <p>
+          <strong>Name:</strong>
+          <%= @simple_vibrating_grizzly.column_name %>
+        </p>
+
+        <p>
+          <strong>Nominal opening:</strong>
+          <%= @simple_vibrating_grizzly.nominal_opening %>
+        </p>
+
+        <p>
+          <strong>Grizzly width:</strong>
+          <%= @simple_vibrating_grizzly.grizzly_width %>
+        </p>
+
+        <p>
+          <strong>Grizzly length:</strong>
+          <%= @simple_vibrating_grizzly.grizzly_length %>
+        </p>
+
+        <p>
+            <strong>Calculated Approximate TPH: <span class="green-text"><%= @simple_vibrating_grizzly.approximate_tph.round(0) %></span></strong>
+        </p>
+
+        <%= link_to 'Edit', edit_simple_vibrating_grizzly_path(@simple_vibrating_grizzly) %> |
+        <%= link_to 'Back', simple_vibrating_grizzlies_path %>
+
+    </div>
+
+</div>

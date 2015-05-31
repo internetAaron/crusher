@@ -1,0 +1,26 @@
+# == Schema Information
+#
+# Table name: vertical_shaft_impact_crushers
+#
+#  id              :integer          not null, primary key
+#  drive_diameter  :decimal(, )
+#  driven_diameter :decimal(, )
+#  motor_rpm       :decimal(, )
+#  rotor_diameter  :decimal(, )
+#  created_at      :datetime
+#  updated_at      :datetime
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  drive_diameter: 9.99
+  driven_diameter: 9.99
+  motor_rpm: 9.99
+  rotor_diameter: 9.99
+
+two:
+  drive_diameter: 9.99
+  driven_diameter: 9.99
+  motor_rpm: 9.99
+  rotor_diameter: 9.99

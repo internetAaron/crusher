@@ -1,0 +1,35 @@
+# == Schema Information
+#
+# Table name: horizontal_shaft_impact_crushers
+#
+#  id              :integer          not null, primary key
+#  name            :string(255)
+#  drive_diameter  :decimal(10, 2)
+#  driven_diameter :decimal(10, 2)
+#  rpm             :integer
+#  roto_diameter   :integer
+#  shaft_rpm       :integer
+#  tip_speed       :integer
+#  created_at      :datetime
+#  updated_at      :datetime
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  drive_diameter: 1
+  driven_diameter: 1
+  rpm: 1
+  roto_diameter: 1
+  shaft_rpm: 1
+  tip_speed: 1
+
+two:
+  name: MyString
+  drive_diameter: 1
+  driven_diameter: 1
+  rpm: 1
+  roto_diameter: 1
+  shaft_rpm: 1
+  tip_speed: 1

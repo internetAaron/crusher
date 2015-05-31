@@ -1,0 +1,37 @@
+<div class="container">
+  
+  <div class="span-12">
+
+    <h1>Vertical Shaft Impact Crushers</h1>
+
+    <table class="tables">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Drive diameter</th>
+          <th>Driven diameter</th>
+          <th>Motor rpm</th>
+          <th>Rotor diameter</th>
+          <th>Tip Speed</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @vertical_shaft_impact_crushers.each do |vertical_shaft_impact_crusher| %>
+          <tr>
+            <td><%= link_to "#{vertical_shaft_impact_crusher.column_name}", vertical_shaft_impact_crusher %></td>
+            <td><%= vertical_shaft_impact_crusher.drive_diameter %></td>
+            <td><%= vertical_shaft_impact_crusher.driven_diameter %></td>
+            <td><%= vertical_shaft_impact_crusher.motor_rpm %></td>
+            <td><%= vertical_shaft_impact_crusher.rotor_diameter %></td>
+            <td><strong class="green-text"><%= vertical_shaft_impact_crusher.calculated_tip_speed.round(0) %>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+
+    <br>
+
+    <%= link_to 'New Vertical shaft impact crusher', new_vertical_shaft_impact_crusher_path %>
+  </div>
+</div>

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @calculator.name %>
+</p>
+
+<p>
+  <strong>Featured:</strong>
+  <%= @calculator.featured %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @calculator.category_id %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @calculator.description %>
+</p>
+
+<p>
+  <strong>Picture:</strong>
+  <%= @calculator.picture %>
+</p>
+
+<%= link_to 'Edit', edit_calculator_path(@calculator) %> |
+<%= link_to 'Back', calculators_path %>
