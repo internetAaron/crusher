@@ -9,6 +9,7 @@
 #  rotor_diameter  :decimal(, )
 #  created_at      :datetime
 #  updated_at      :datetime
+#  column_name     :string(255)
 #
 
 class VerticalShaftImpactCrusher < ActiveRecord::Base

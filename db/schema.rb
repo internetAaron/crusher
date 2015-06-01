@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150530030835) do
+ActiveRecord::Schema.define(version: 20150601015946) do
 
   create_table "calculators", force: true do |t|
     t.string   "name"
@@ -41,6 +41,14 @@ ActiveRecord::Schema.define(version: 20150530030835) do
     t.datetime "updated_at"
   end
 
+  create_table "locations", force: true do |t|
+    t.string   "name"
+    t.string   "supervisor"
+    t.string   "supervisor_email"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "simple_vibrating_grizzlies", force: true do |t|
     t.decimal  "nominal_opening"
     t.decimal  "grizzly_width"
@@ -58,6 +66,7 @@ ActiveRecord::Schema.define(version: 20150530030835) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "column_name"
+    t.string   "name"
   end
 
   create_table "vibrating_grizzlies", force: true do |t|

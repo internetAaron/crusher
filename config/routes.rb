@@ -1,13 +1,11 @@
 Rails.application.routes.draw do
+  resources :locations
+
   resources :vertical_shaft_impact_crushers
 
   resources :simple_vibrating_grizzlies
 
   resources :horizontal_shaft_impact_crushers
-
-  resources :calculators
-
-  resources :categories
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
