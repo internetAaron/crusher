@@ -10,6 +10,8 @@
 #  created_at      :datetime
 #  updated_at      :datetime
 #  column_name     :string(255)
+#  name            :string(255)
+#  location_id     :integer
 #
 
 require 'test_helper'

@@ -11,7 +11,7 @@
         <th>Driven diameter</th>
         <th>Rpm</th>
         <th>Roto diameter</th>
-        <!-- <th>Shaft rpm</th> -->
+        <th>Location ID</th>
         <th>Tip speed</th>
       </tr>
     </thead>
@@ -25,7 +25,7 @@
           <td><%= horizontal_shaft_impact_crusher.driven_diameter %></td>
           <td><%= horizontal_shaft_impact_crusher.rpm %></td>
           <td><%= horizontal_shaft_impact_crusher.roto_diameter %></td>
-          <!-- <td><strong><%= horizontal_shaft_impact_crusher.calculated_shaft_rpm.round(2) %></strong></td> -->
+          <td><%= horizontal_shaft_impact_crusher.location_id %></td>
           <td><strong class="green-text"><%= horizontal_shaft_impact_crusher.calculated_tip_speed.round(0) %> FPM</strong></td>
         </tr>
       <% end %>
@@ -34,6 +34,6 @@
 
   <br>
 
-  <%= link_to 'New Horizontal shaft impact crusher', new_horizontal_shaft_impact_crusher_path %>
+  <%= link_to 'New Horizontal shaft impact crusher', new_location_horizontal_shaft_impact_crusher_path %>
 
 </div>

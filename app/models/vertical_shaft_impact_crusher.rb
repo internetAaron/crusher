@@ -10,9 +10,13 @@
 #  created_at      :datetime
 #  updated_at      :datetime
 #  column_name     :string(255)
+#  name            :string(255)
+#  location_id     :integer
 #
 
 class VerticalShaftImpactCrusher < ActiveRecord::Base
+
+	belongs_to :location
 
 	validates_presence_of :name
 	validates_numericality_of :drive_diameter, minimum: 1, too_short: 'This value can not be left empty'

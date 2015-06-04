@@ -12,6 +12,7 @@
 #  tip_speed       :integer
 #  created_at      :datetime
 #  updated_at      :datetime
+#  location_id     :integer
 #
 
 require 'test_helper'

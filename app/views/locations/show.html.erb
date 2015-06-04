@@ -1,19 +1,28 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+  
+	<div class="span-12">
 
-<p>
-  <strong>Name:</strong>
-  <%= @location.name %>
-</p>
+		<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Supervisor:</strong>
-  <%= @location.supervisor %>
-</p>
+		<p>
+		  <strong>Name:</strong>
+		  <%= @location.name %>
+		</p>
 
-<p>
-  <strong>Supervisor email:</strong>
-  <%= @location.supervisor_email %>
-</p>
+		<p>
+		  <strong>Supervisor:</strong>
+		  <%= @location.supervisor %>
+		</p>
 
-<%= link_to 'Edit', edit_location_path(@location) %> |
-<%= link_to 'Back', locations_path %>
+		<p>
+		  <strong>Supervisor email:</strong>
+		  <%= @location.supervisor_email %>
+		</p>
+
+		<%= link_to 'Edit', edit_location_path(@location) %> |
+		<%= link_to 'Back', locations_path %>
+
+	</div>
+
+</div>
+

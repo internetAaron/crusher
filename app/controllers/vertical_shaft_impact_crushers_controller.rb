@@ -69,6 +69,6 @@ class VerticalShaftImpactCrushersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def vertical_shaft_impact_crusher_params
-      params.require(:vertical_shaft_impact_crusher).permit(:drive_diameter, :driven_diameter, :motor_rpm, :rotor_diameter, :name)
+      params.require(:vertical_shaft_impact_crusher).permit(:drive_diameter, :driven_diameter, :motor_rpm, :rotor_diameter, :name, :location_id)
     end
 end

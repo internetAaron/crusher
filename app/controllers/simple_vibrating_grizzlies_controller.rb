@@ -69,6 +69,6 @@ class SimpleVibratingGrizzliesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def simple_vibrating_grizzly_params
-      params.require(:simple_vibrating_grizzly).permit(:column_name, :nominal_opening, :grizzly_width, :grizzly_length)
+      params.require(:simple_vibrating_grizzly).permit(:column_name, :nominal_opening, :grizzly_width, :grizzly_length, :location_id)
     end
 end

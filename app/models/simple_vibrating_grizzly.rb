@@ -9,9 +9,12 @@
 #  created_at      :datetime
 #  updated_at      :datetime
 #  column_name     :string(255)
+#  location_id     :integer
 #
 
 class SimpleVibratingGrizzly < ActiveRecord::Base
+
+	belongs_to :location
 
 	def sq_ft_grizz_section
 		self.grizzly_width * self.grizzly_length/144

@@ -16,14 +16,7 @@
     <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">MENU</a>
     <nav role="navigation">
       <ul id="js-navigation-menu" class="navigation-menu show">
-        <li class="nav-link"><a href="javascript:void(0)">Locations</a></li>
-        <li class="nav-link more"><a href="javascript:void(0)">Calculators</a>
-          <ul class="submenu">
-            <li><%= link_to "Horizontal Impact Crusher", horizontal_shaft_impact_crushers_path %></li>
-            <li><%= link_to "Vertical Impact Crusher", vertical_shaft_impact_crushers_path %></li>
-            <li><%= link_to "Vibrating Grizzlies", simple_vibrating_grizzlies_path %></li>
-          </ul>
-        </li>
+        <li class="nav-link"><%= link_to "Locations", locations_path %></li>
       </ul>
     </nav>
     <div class="navigation-tools">

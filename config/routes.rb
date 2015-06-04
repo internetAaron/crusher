@@ -1,11 +1,14 @@
 Rails.application.routes.draw do
-  resources :locations
 
-  resources :vertical_shaft_impact_crushers
+  root to: "locations#index"
 
-  resources :simple_vibrating_grizzlies
+  resources :locations, shallow: true do
+    resources :vertical_shaft_impact_crushers
+    resources :simple_vibrating_grizzlies
+    resources :horizontal_shaft_impact_crushers
+  end
 
-  resources :horizontal_shaft_impact_crushers
+  
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

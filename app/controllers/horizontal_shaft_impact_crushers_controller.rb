@@ -4,7 +4,8 @@ class HorizontalShaftImpactCrushersController < ApplicationController
   # GET /horizontal_shaft_impact_crushers
   # GET /horizontal_shaft_impact_crushers.json
   def index
-    @horizontal_shaft_impact_crushers = HorizontalShaftImpactCrusher.all
+    @location = Location.find(params[:location_id])
+    @horizontal_shaft_impact_crushers = @location.horizontal_shaft_impact_crushers
   end
 
   # GET /horizontal_shaft_impact_crushers/1
@@ -69,6 +70,6 @@ class HorizontalShaftImpactCrushersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def horizontal_shaft_impact_crusher_params
-      params.require(:horizontal_shaft_impact_crusher).permit(:name, :drive_diameter, :driven_diameter, :rpm, :roto_diameter, :shaft_rpm, :tip_speed)
+      params.require(:horizontal_shaft_impact_crusher).permit(:name, :drive_diameter, :driven_diameter, :rpm, :roto_diameter, :shaft_rpm, :tip_speed, :location_id )
     end
 end

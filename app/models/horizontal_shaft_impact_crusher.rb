@@ -12,9 +12,12 @@
 #  tip_speed       :integer
 #  created_at      :datetime
 #  updated_at      :datetime
+#  location_id     :integer
 #
 
 class HorizontalShaftImpactCrusher < ActiveRecord::Base
+
+	belongs_to :location
 
 	validates_presence_of :name
 	validates_numericality_of :drive_diameter, minimum: 1, too_short: 'This value can not be left empty'
