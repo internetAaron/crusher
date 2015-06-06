@@ -4,7 +4,8 @@ class VerticalShaftImpactCrushersController < ApplicationController
   # GET /vertical_shaft_impact_crushers
   # GET /vertical_shaft_impact_crushers.json
   def index
-    @vertical_shaft_impact_crushers = VerticalShaftImpactCrusher.all
+    @location = Location.find(params[:location_id])
+    @vertical_shaft_impact_crushers = @location.vertical_shaft_impact_crushers
   end
 
   # GET /vertical_shaft_impact_crushers/1

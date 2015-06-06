@@ -15,7 +15,8 @@ class HorizontalShaftImpactCrushersController < ApplicationController
 
   # GET /horizontal_shaft_impact_crushers/new
   def new
-    @horizontal_shaft_impact_crusher = HorizontalShaftImpactCrusher.new
+    @location = Location.find(params[:location_id])
+    @horizontal_shaft_impact_crusher = @location.horizontal_shaft_impact_crushers.new
   end
 
   # GET /horizontal_shaft_impact_crushers/1/edit
@@ -25,7 +26,9 @@ class HorizontalShaftImpactCrushersController < ApplicationController
   # POST /horizontal_shaft_impact_crushers
   # POST /horizontal_shaft_impact_crushers.json
   def create
+    @location = Location.find(params[:location_id])
     @horizontal_shaft_impact_crusher = HorizontalShaftImpactCrusher.new(horizontal_shaft_impact_crusher_params)
+    @horizontal_shaft_impact_crusher.location = @location
 
     respond_to do |format|
       if @horizontal_shaft_impact_crusher.save

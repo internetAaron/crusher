@@ -6,6 +6,11 @@ Rails.application.routes.draw do
     resources :vertical_shaft_impact_crushers
     resources :simple_vibrating_grizzlies
     resources :horizontal_shaft_impact_crushers
+
+
+    resources :vertical_shaft_impact_crusher
+    resources :simple_vibrating_grizzly
+    resources :horizontal_shaft_impact_crusher
   end
 
   

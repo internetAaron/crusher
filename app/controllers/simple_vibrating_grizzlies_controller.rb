@@ -4,7 +4,8 @@ class SimpleVibratingGrizzliesController < ApplicationController
   # GET /simple_vibrating_grizzlies
   # GET /simple_vibrating_grizzlies.json
   def index
-    @simple_vibrating_grizzlies = SimpleVibratingGrizzly.all
+    @location = Location.find(params[:location_id])
+    @simple_vibrating_grizzlies = @location.simple_vibrating_grizzlies
   end
 
   # GET /simple_vibrating_grizzlies/1

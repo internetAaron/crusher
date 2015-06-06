@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150601230154) do
+ActiveRecord::Schema.define(version: 20150605165540) do
 
   create_table "calculators", force: true do |t|
     t.string   "name"
@@ -35,8 +35,6 @@ ActiveRecord::Schema.define(version: 20150601230154) do
     t.decimal  "driven_diameter", precision: 10, scale: 2
     t.integer  "rpm"
     t.integer  "roto_diameter"
-    t.integer  "shaft_rpm"
-    t.integer  "tip_speed"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "location_id"
