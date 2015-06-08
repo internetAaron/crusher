@@ -3,11 +3,13 @@
   <div class="span-12">
 
     <h1>Vertical Shaft Impact Crushers</h1>
+    <p><%= link_to 'Back', locations_path %></p>
 
     <table class="tables">
       <thead>
         <tr>
           <th>Name</th>
+          <th>Last Updated</th>
           <th>Drive diameter</th>
           <th>Driven diameter</th>
           <th>Motor rpm</th>
@@ -19,7 +21,8 @@
       <tbody>
         <% @vertical_shaft_impact_crushers.each do |vertical_shaft_impact_crusher| %>
           <tr>
-            <td><%= link_to "#{vertical_shaft_impact_crusher.column_name}", vertical_shaft_impact_crusher %></td>
+            <td><%= link_to "#{vertical_shaft_impact_crusher.name}", vertical_shaft_impact_crusher %></td>
+            <td><%= vertical_shaft_impact_crusher.updated_at.strftime("%m/%e/%y %l:%M %p") %></td>
             <td><%= vertical_shaft_impact_crusher.drive_diameter %></td>
             <td><%= vertical_shaft_impact_crusher.driven_diameter %></td>
             <td><%= vertical_shaft_impact_crusher.motor_rpm %></td>

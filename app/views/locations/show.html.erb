@@ -1,26 +1,56 @@
 <div class="container">
-  
 	<div class="span-12">
 
-		<p id="notice"><%= notice %></p>
+		<p><%= notice %></p>
 
-		<p>
-		  <strong>Name:</strong>
-		  <%= @location.name %>
-		</p>
+	</div>
+</div>
 
-		<p>
-		  <strong>Supervisor:</strong>
-		  <%= @location.supervisor %>
-		</p>
+<div class="container">
+	<div class="span-6">
 
-		<p>
-		  <strong>Supervisor email:</strong>
-		  <%= @location.supervisor_email %>
-		</p>
+		<div class="breadcrumb">
+		  <%= link_to 'Locations', locations_path %>
+		  <a href="javascript:void(0)"><%= @location.name %></a>
+		</div>
 
-		<%= link_to 'Edit', edit_location_path(@location) %> |
-		<%= link_to 'Back', locations_path %>
+	</div>
+
+	<div class="span-6 text-right">
+		<%= link_to 'Delete', @location, method: :delete, data: { confirm: 'Are you sure you want to delete this location?' } %> |
+		<%= link_to 'Edit', edit_location_path(@location), class: "button" %>
+	</div>
+</div>
+
+
+<div class="container">
+  
+	<div class="span-5">	
+
+		<h3>Bloomington</h3>
+		<p><strong>Supervisor:</strong> <%= @location.supervisor %></p>
+		<p><%= mail_to "#{@location.supervisor_email}", "Email Supervisor" %></p>
+
+	</div>
+
+  
+	<div class="span-7">
+
+		<h3>Calculators</h3>
+
+		<div class="card">
+			<div class="card-header">
+				<span class="badge"><%= @location.horizontal_shaft_impact_crushers.count  %></span> <%= link_to 'Horizontal Shaft Impact Crushers', location_horizontal_shaft_impact_crushers_path(@location) %>
+			</div>
+		    
+		</div>
+
+		<div class="card">
+			<div class="card-header">
+				<span class="badge"><%= @location.vertical_shaft_impact_crushers.count  %></span> <%= link_to 'Vertical Shaft Impact Crushers', location_vertical_shaft_impact_crushers_path(@location) %>
+			</div>
+		</div>
+
 
 	</div>
 

@@ -34,9 +34,11 @@
 		  <strong class="green-text"><%= @vertical_shaft_impact_crusher.calculated_tip_speed.round(0) %></strong>
 		</p>
 
+		<p>Show range 8000 - 1200 if over 1200 make it red and show warning.</p>
+
 		<%= link_to 'Edit', edit_vertical_shaft_impact_crusher_path(@vertical_shaft_impact_crusher) %> |
 		<%= link_to 'Destroy', @vertical_shaft_impact_crusher, method: :delete, data: { confirm: 'Are you sure?' } %> | 
-		<%= link_to 'Back', vertical_shaft_impact_crushers_path %>
+		<%= link_to 'Back To All', location_vertical_shaft_impact_crushers_path(@vertical_shaft_impact_crusher.location) %>
 
 	</div>
 </div>

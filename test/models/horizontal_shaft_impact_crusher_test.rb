@@ -8,8 +8,6 @@
 #  driven_diameter :decimal(10, 2)
 #  rpm             :integer
 #  roto_diameter   :integer
-#  shaft_rpm       :integer
-#  tip_speed       :integer
 #  created_at      :datetime
 #  updated_at      :datetime
 #  location_id     :integer

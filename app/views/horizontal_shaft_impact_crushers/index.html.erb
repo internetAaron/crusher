@@ -1,6 +1,19 @@
+<div class="container">
+  <div class="span-12">
+
+    <div class="breadcrumb">
+      <%= link_to 'Locations', locations_path %>
+      <%= link_to "#{@location.name}", url_for([@locations, @location]) %>
+      <a href="#">Horizontal Shaft Impact Crushers</a>
+    </div>
+
+  </div>
+</div>
+
 <div class="container" >
 
-  <h1>Listing Horizontal Shaft Impact Crushers</h1>
+  <h1><%= @location.name %> Horizontal Shaft Impact Crushers</h1>
+  <p><%= link_to 'Back', url_for([@locations, @location]) %></p>
 
   <table class="tables">
     <thead>

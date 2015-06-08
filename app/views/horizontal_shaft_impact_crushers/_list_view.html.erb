@@ -1,0 +1,29 @@
+<table class="tables">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Last Updated</th>
+      <th>Drive diameter</th>
+      <th>Driven diameter</th>
+      <th>Rpm</th>
+      <th>Roto diameter</th>
+      <th>Location ID</th>
+      <th>Tip speed</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @horizontal_shaft_impact_crushers.each do |horizontal_shaft_impact_crusher| %>
+      <tr>
+        <td><%= link_to "#{horizontal_shaft_impact_crusher.name}", horizontal_shaft_impact_crusher %></td>
+        <td><%= horizontal_shaft_impact_crusher.updated_at.strftime("%m/%e/%y %l:%M %p") %></td>
+        <td><%= horizontal_shaft_impact_crusher.drive_diameter %></td>
+        <td><%= horizontal_shaft_impact_crusher.driven_diameter %></td>
+        <td><%= horizontal_shaft_impact_crusher.rpm %></td>
+        <td><%= horizontal_shaft_impact_crusher.roto_diameter %></td>
+        <td><%= horizontal_shaft_impact_crusher.location_id %></td>
+        <td><strong class="green-text"><%= horizontal_shaft_impact_crusher.calculated_tip_speed.round(0) %> FPM</strong></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

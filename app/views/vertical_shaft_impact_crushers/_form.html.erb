@@ -1,4 +1,4 @@
-<%= form_for(@vertical_shaft_impact_crusher) do |f| %>
+<%= form_for [@location, @vertical_shaft_impact_crusher] do |f| %>
   <% if @vertical_shaft_impact_crusher.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@vertical_shaft_impact_crusher.errors.count, "error") %> prohibited this vertical_shaft_impact_crusher from being saved:</h2>

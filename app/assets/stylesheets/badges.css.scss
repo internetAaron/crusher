@@ -1,0 +1,39 @@
+@import "variables";
+
+$badge-font-size: 0.75em !default;
+$medium-gray: $grey-medium !default;
+$alert-color: $red !default;
+$error-color: $yellow !default;
+$notice-color: $grey !default;
+$success-color: $green !default;
+
+@mixin badge($color: $blue) {
+  background-color: $color;
+  border-radius: $badge-font-size * 5;
+  color: #FFF;
+  display: inline-block;
+  font-size: $badge-font-size;
+  font-weight: 600;
+  line-height: 1;
+  padding: 0.4em 1.2em;
+}
+
+.badge {
+  @include badge;
+}
+
+.badge-alert {
+  @include badge($alert-color);
+}
+
+.badge-error {
+  @include badge($error-color);
+}
+
+.badge-notice {
+  @include badge($notice-color);
+}
+
+.badge-success {
+  @include badge($success-color);
+}
