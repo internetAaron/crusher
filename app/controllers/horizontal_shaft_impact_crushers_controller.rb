@@ -11,6 +11,7 @@ class HorizontalShaftImpactCrushersController < ApplicationController
   # GET /horizontal_shaft_impact_crushers/1
   # GET /horizontal_shaft_impact_crushers/1.json
   def show
+    @location = @horizontal_shaft_impact_crusher.location
   end
 
   # GET /horizontal_shaft_impact_crushers/new

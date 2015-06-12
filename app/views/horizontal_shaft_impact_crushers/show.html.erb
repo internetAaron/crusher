@@ -1,9 +1,21 @@
+<div class="container">
+  <div class="span-12">
+
+    <p id="notice"><%= notice %></p>
+
+    <div class="breadcrumb">
+      <%= link_to 'Locations', locations_path %>
+      <%= link_to "#{@location.name}", url_for([@locations, @location]) %>
+      <%= link_to 'Horizontal Shaft Impact Crushers', location_horizontal_shaft_impact_crushers_path(@horizontal_shaft_impact_crusher.location) %>
+      <a href="#"><%= @horizontal_shaft_impact_crusher.name %></a>
+    </div>
+
+  </div>
+</div>
+
 <div class="container" >
 
-  <p id="notice"><%= notice %></p>
-
   <div class="span-6"> 
-    <%= link_to 'Back To All', location_horizontal_shaft_impact_crushers_path(@horizontal_shaft_impact_crusher.location) %>
    <h4><%= @horizontal_shaft_impact_crusher.name %><span class="kicker"><%= @horizontal_shaft_impact_crusher.updated_at.strftime("%b %e, %l:%M %p") %></span></h4>
     <table class="tables">
       <tbody>
