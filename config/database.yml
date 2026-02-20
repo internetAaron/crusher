@@ -1,16 +1,20 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  host: <%= ENV['SUPABASE_DB_HOST'] %>
+  port: <%= ENV.fetch('SUPABASE_DB_PORT') { 5432 } %>
+  database: <%= ENV.fetch('SUPABASE_DB_NAME') { 'postgres' } %>
+  username: <%= ENV['SUPABASE_DB_USER'] %>
+  password: <%= ENV['SUPABASE_DB_PASSWORD'] %>
+  sslmode: require
+
 development:
-  adapter: postgresql
-  database: crusher
-  pool: 5
-  timeout: 5000
+  <<: *default
+
 test:
-  adapter: postgresql
-  database: crusher
-  pool: 5
-  timeout: 5000
+  <<: *default
+  database: <%= ENV.fetch('SUPABASE_DB_NAME') { 'postgres' } %>_test
 
 production:
-  adapter: postgresql
-  database: crusher
-  pool: 5
-  timeout: 5000
+  <<: *default
